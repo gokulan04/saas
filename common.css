@@ -1,0 +1,169 @@
+  /*..............CUSTOM CLASS...........*/
+
+
+  h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: black;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.f13 {
+    font-size: 13px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nav-bg {
+    background-color: transparent;
+    transition: 300ms ease;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+footer {
+    padding: 10px;
+    background-color: #ff601a;
+    color: white;
+}
+
+.disp_flx_center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.disp_flx_left {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.flex-basis-50 {
+    flex-basis: 50%;
+}
+
+.flex-basis-40 {
+    flex-basis: 40%;
+}
+
+.flex-basis-20 {
+    flex-basis: 20%;
+}
+
+.flex-basis-60 {
+    flex-basis: 60%;
+}
+
+.pos_abs {
+    position: absolute;
+}
+
+.pos_rel {
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.max-container {
+    max-width: 1400px;
+    padding-inline: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid red; */
+}
+
+.pd-top50 {
+    padding-top: 50px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.border-rad-20 {
+    border-radius: 20px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.txt-align-left {
+    text-align: left;
+}
+
+.txt-align-right {
+    text-align: right;
+}
+
+.txt-align-center {
+    text-align: center
+}
+
+.disp_inline {
+    display: inline-block;
+}
+
+.pos_fix{
+    position: fixed;
+}
+
+/* footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+
+
+/*..............CUSTOM CLASS END...........*/
+
+
+.secondary-logo-container{
+    left: 0;
+    padding: 5px;
+    margin-left: 30px;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="././images/company-logo.ico">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="Scripts/bowser-1.6.0.min.js"></script>
+    <script src="Scripts/new/JsUtils.js"></script>
+    <script src="Scripts/new/office365.util.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css"> -->
+
+    <title>Shastik apparels</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: Poppins-Regular;
+            src: url(./fonts/Poppins/Poppins-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: Poppins-Light;
+            src: url(./fonts/Poppins/Poppins-Light.ttf);
+        }
+
+        @font-face {
+            font-family: Poppins-Medium;
+            src: url(./fonts/Poppins/Poppins-Medium.ttf);
+        }
+
+        @font-face {
+            font-family: Poppins-Bold;
+            src: url(./fonts/Poppins/Poppins-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: comforta-regular;
+            src: url(./fonts/comforta/Comfortaa.woff2);
+        }
+
+
+
+        body {
+            font-size: 16px;
+            line-height: 1.42857143;
+            color: hsla(0, 0%, 0%, 1);
+            background: hsla(0, 0%, 75%, 1);
+            overflow-x: hidden;
+            font-family: Poppins-Regular, Arial, sans-serif;
+        }
+
+        li a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .hero-section {
+            padding-top: 160px;
+        }
+
+        .bg-image-wrapper {
+            height: 500px;
+            background-color: white;
+        }
+
+        .hero-carousel-container {
+            max-width: 900px;
+            margin: 70px auto 30px;
+            /* display: none; */
+        }
+
+        .hero-carousel-container .hero-carousel-list {
+            border-radius: 20px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .header-nav-container {
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background: hsla(0, 0%, 85%, 1);
+        }
+
+        .secondary-nav {
+            transition: 300ms ease;
+        }
+
+        .hero-carousel .slick-dots {
+            left: 0;
+            padding: 20px 0px;
+            right: 0;
+        }
+
+        .slick-dots button::before {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-carousel-container .hero-carousel-list .carousel-img {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .hero-carousel-container .hero-carousel-list::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right top, rgba(0, 0, 0, 0.617), rgba(0, 0, 0, 0));
+        }
+
+        .hero-carousel-container .hero-carousel-list .img-description {
+            font-size: 20px;
+            color: rgb(227, 227, 227);
+            text-align: left;
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+            padding: 40px;
+            width: 50%;
+        }
+
+        .brand-list-container {
+            background: #BEBEBE;
+            box-shadow: 0px 4px 14px 2px rgb(0 0 0 / 15%);
+            border-radius: 0px 0px 35px 35px;
+            padding-block: 20px;
+            position: relative;
+            z-index: 2;
+            background-color: hsl(0deg 0% 80%);
+        }
+
+        .brand-container {
+            display: inline-block;
+            vertical-align: middle;
+            margin-inline: 50px;
+        }
+
+        .brand-title {
+            color: hsla(18, 100%, 30%, 1);
+            font-size: 30px;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+        }
+
+        .brand-description {
+            color: #213a5c;
+            font-family: Poppins-Medium;
+            font-size: 10px;
+            text-align: end;
+        }
+
+        .logo-container {
+            margin-right: 40px;
+        }
+
+        .logo-container .main-logo {
+            max-width: 30px;
+        }
+
+        .nav-items {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: Poppins-Medium;
+            color: hsla(0, 0%, 0%, 1);
+            cursor: pointer;
+            padding: 20px 90px;
+            transition: 300ms ease;
+        }
+
+        .nav-item-link {
+            display: inline-block;
+        }
+
+        .nav-items:hover {
+            /* background-color: hsla(0, 0%, 65%, .5); */
+            /* text-decoration: underline; */
+        }
+
+        .category-card-main-container {
+            flex-wrap: wrap;
+        }
+
+        .category-card {
+            padding: 30px;
+        }
+
+        .category-card .image-container {
+            border-radius: 20px;
+            max-height: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .category-card .image-container img {
+            display: block;
+        }
+
+        .category-card .content-container {
+            padding: 15px;
+        }
+
+        .contact-section .contact-container {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .description-title {
+            font-size: 18px;
+            text-align: center;
+            font-family: Poppins-Bold;
+            color: rgb(21, 21, 21);
+            margin-bottom: 5px;
+        }
+
+        .main-content-wrapper,
+        .main-image-wrapper {
+            padding: 30px;
+        }
+
+        .mission-list-container {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .mission-list-title {
+            margin-bottom: 35px;
+        }
+
+        .mission-list {
+            margin-left: 30px;
+
+        }
+
+        .mission-list li {
+            margin-bottom: 25px;
+            list-style: none;
+        }
+
+        .mission-list li .list-icon {
+            width: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
+        .contact-wrapper:not(:last-child) {
+            border-right: 1px solid #000;
+        }
+
+        .contact-section-icon {
+            width: 30px;
+            margin: 0 auto;
+        }
+
+        .contact-icon-container {
+            margin-bottom: 40px;
+        }
+
+        .contact-container {
+            padding: 20px;
+            max-width: 300px;
+        }
+
+        .contact-container .address-title {
+            margin-bottom: 10px;
+        }
+
+        .contact-container .address-container {
+            margin-bottom: 20px;
+        }
+
+        .contact-container .email-info {
+            margin-bottom: 50px;
+        }
+
+        .location {
+            box-shadow: 0px 0px 16px 2px rgb(0 0 0 / 17%);
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .secondary-logo {
+            max-width: 20px;
+        }
+
+        .secondary-logo-container {
+            left: 0;
+            padding: 5px;
+            opacity: 0;
+            transition: opacity 200ms ease-in;
+        }
+
+        .siderbar-menu-list .nav-items {
+            display: block;
+        }
+
+        .main-sidebar {
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            z-index: 13;
+            transform: translateX(100%);
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            transition: 300ms ease-out;
+        }
+
+        .sidebar-title {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-freezer {
+            height: 100vh;
+            width: 100%;
+            z-index: 12;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .close-sidebar-icon {
+            padding-right: 20px;
+            right: 0;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .open-sidebar-icon {
+            right: 0;
+            top: 50%;
+            font-size: 30px;
+            width: 60px;
+            padding-right: 20px;
+            display: none;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .main-sidebar .nav-items {
+            display: block;
+            padding: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .main-sidebar .nav-item-link {
+            padding-inline: 50px;
+            padding-block: 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .main-sidebar .nav-item-link:hover {
+            background-color: hsl(0, 0%, 88%);
+        }
+
+        .main-sidebar .nav-item-link::after {
+            display: none;
+        }
+
+        .main-sidebar .nav-items i {
+            margin-right: 15px;
+        }
+
+        .main-sidebar .nav-items:first-child {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item-link {
+            position: relative;
+        }
+
+        .nav-item-link::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            opacity: 0;
+            transition: 500ms ease;
+        }
+
+        .nav-items:hover .nav-item-link::after {
+            opacity: 1;
+        }
+
+        .sticky-pop-pup {
+            bottom: 0;
+            right: 0;
+            margin: 50px 80px;
+            /* top: 50%; */
+            bottom: 0;
+            font-size: 40px;
+        }
+        
+        .main-logo-link{
+            cursor: pointer;
+        }
+
+        .sticky-pop-pup img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .scroll-to-top {
+            opacity: 0;
+            cursor: pointer;
+            transform: translateY(0);
+        }
+
+        .service-img {
+            max-width: 350px;
+            width: auto;
+            margin: 0 auto;
+        }
+
+        .slick-dots button::before {
+            color: rgba(0, 0, 0, 1) !important;
+        }
+
+        .double-img {
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+        .double-img img {
+            width: auto !important;
+            max-width: 50%;
+            display: inline-block;
+            height: auto;
+            vertical-align: top;
+        }
+
+        .max-width-210 {
+            max-width: 210px;
+        }
+
+        .timings-info td {
+            vertical-align: top;
+        }
+        
+        .sidebar-menu-list .nav-item-link img{
+            display: inline-block;
+            vertical-align: middle;
+            width: 25px;
+            margin-right: 10px;
+            height: auto;
+        }
+
+        .timings-info td span {
+            white-space: nowrap;
+        }
+
+        .email-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .email-info a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes pop-pup {
+            0% {
+                transform: translateY(4px);
+                opacity: 0;
+            }
+
+            25% {
+                transform: translateY(-4px);
+                opacity: 1;
+            }
+
+            45% {
+                transform: translateY(4px);
+                opacity: 1;
+            }
+
+            65% {
+                transform: translateY(-4px);
+                opacity: 1;
+            }
+
+            85% {
+                transform: translateY(4px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (max-width: 1364px) {
+            .brand-title {
+                font-size: 25px;
+            }
+
+            .secondary-nav .nav-items {
+                padding-inline: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1220px) {
+            .brand-title {
+                font-size: 20px;
+            }
+
+            .secondary-nav .nav-items {
+                padding-inline: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1230px) {
+            .brand-title {
+                font-size: 18px;
+            }
+
+            .brand-container {
+                padding-inline: 20px;
+                margin-inline: 20px;
+            }
+
+            .secondary-nav .nav-items {
+                padding-inline: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .secondary-nav {
+                display: none;
+            }
+
+            .header-nav-container {
+                background: transparent;
+            }
+
+            .open-sidebar-icon {
+                display: block;
+            }
+
+            .brand-container {
+                padding-inline: 5px;
+                margin-inline: 5px;
+            }
+
+            .scroll-to-top {
+                display: none;
+            }
+
+            .brand-container>.brands-div {
+                display: block;
+            }
+
+            .brand-description {
+                text-align: left;
+            }
+
+            .contact-wrapper {
+                flex-basis: 50%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .contact-wrapper:nth-child(even) {
+                border: none;
+            }
+
+            .contact-container {
+                /* border-bottom: 1px solid rgba(0,0,0,0.5); */
+            }
+
+
+        }
+
+        @media only screen and (max-width: 768px) {
+            .category-card-wrapper {
+                flex-basis: 100%;
+            }
+
+            .hero-carousel-container {
+                max-width: 500px;
+            }
+
+            .main-content-wrapper,
+            .main-image-wrapper {
+                width: 100%;
+            }
+
+            .about-section .max-container,
+            .service-section .max-container {
+                flex-direction: column-reverse;
+            }
+
+            .sticky-pop-pup {
+                margin: 40px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar-freezer pos_fix"></div>
+    <div class="main-sidebar pos_fix">
+        <h3 class="sidebar-title">Menus <div class="close-sidebar-icon disp_inline pos_abs"><i
+                    class="fa-solid fa-circle-chevron-right"></i></div>
+        </h3>
+        <ul class="sidebar-menu-list">
+            <li class="nav-items"><a href="#hero-section" class="nav-item-link home-link"><img class="disp_inline" src="./images/nav-icons/Vector-1.png" alt=""> Home</a></li>
+            <li class="nav-items"><a href="#category-section" class="nav-item-link"><img class="disp_inline" src="./images/nav-icons/Vector-2.png" alt=""> Categories</a></li>
+            <li class="nav-items"><a href="./gallery.html" class="nav-item-link"><img class="disp_inline" src="./images/nav-icons/Vector-3.png" alt=""> Gallery</a></li>
+            <li class="nav-items"><a href="#about-section" class="nav-item-link"><img class="disp_inline" src="./images/nav-icons/Vector-4.png" alt=""> About Us</a></li>
+            <li class="nav-items"><a href="#contact-section" class="nav-item-link"><img class="disp_inline" src="./images/nav-icons/Vector-5.png" alt=""> Contact Us</a></li>
+        </ul>
+    </div>
+    <header class="header-nav-container pos_fix width-100" id="header-nav-container">
+        <nav class="brand-list-container" id="brand-list-container">
+            <div class="max-container pos_rel">
+                <ul class="brand-list nav-list">
+                    <li class="brand-container logo-container">
+                        <a href="./index.html" class="main-logo-link"><img src="./images/company-logo.png" alt="" class="main-logo"></a>
+                    </li>
+                    <li class="brand-container disp_inline">
+                        <div class="brand-container brands-div">
+                            <div class="brand-title">shastik apparels</div>
+                            <div class="brand-description">apparel manufacturer & exporter</div>
+                        </div>
+                        <div class="brand-container brands-div">
+                            <div class="brand-title">shastik garments</div>
+                            <div class="brand-description">customized corporate T-shirts</div>
+                        </div>
+                        <div class="brand-container brands-div">
+                            <div class="brand-title">sri dhanalakshmi tex</div>
+                            <div class="brand-description">Customized Sports uniform - schools & colleges</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="open-sidebar-icon pos_abs"><img src="./images/hamburger.png" alt=""></div>
+            </div>
+        </nav>
+        <nav class="secondary-nav secondary-nav">
+            <div class="max-container disp_flx_center pos_rel">
+                <div class="secondary-logo-container pos_abs"><img src="./images/company-logo.png" alt=""
+                        class="secondary-logo"></div>
+                <ul class="nav-items-list">
+                    <li class="nav-items"><a href="#hero-section" class="nav-item-link home-link">Home</a>
+                    </li>
+                    <li class="nav-items"><a href="#category-section" class="nav-item-link">Categories</a></li>
+                    <li class="nav-items"><a href="./gallery.html" class="nav-item-link">Gallery</a></li>
+                    <li class="nav-items"><a href="#about-section" class="nav-item-link">About Us</a></li>
+                    <li class="nav-items"><a href="#contact-section" class="nav-item-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="hero-section" id="hero-section">
+        <div class="max-container" style="padding-top:1px;">
+            <div class="hero-carousel-container">
+                <ul class="hero-carousel">
+                    <li class="hero-carousel-list pos_rel">
+                        <div class="img-description pos_abs">Customized sports uniforms for schools & colleges</div>
+                        <img src="./images/carousel/carousel-img (4).png" class="carousel-img"></img>
+                    </li>
+                    <li class="hero-carousel-list pos_rel">
+                        <div class="img-description pos_abs">Customized Corporate T-Shirts</div>
+                        <img src="./images/carousel//carousel-img (1).png" class="carousel-img"></img>
+                    </li>
+                    <li class="hero-carousel-list pos_rel">
+                        <div class="img-description pos_abs">Kids Collections</div>
+                        <img class="flex-basis-50" src="././images/carousel/carousel-img (2).png"
+                            class="carousel-img"></img>
+                    </li>
+                    <li class="hero-carousel-list pos_rel">
+                        <div class="img-description pos_abs">Mens & Womens Collections</div>
+                        <img class="flex-basis-50" src="././images/carousel/carousel-img (3).png"
+                            class="carousel-img"></img>
+                    </li>
+            </div>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="category-section">
+        <h2 class="">Category</h2>
+        <div class="category-card-main-container max-container disp_flx_center">
+            <div class="category-card-wrapper flex-basis-60">
+                <div class="category-card">
+                    <div class="image-container">
+                        <img src="./images//carousel/carousel-img (4).png" alt="">
+                    </div>
+                    <div class="content-container">
+                        <div class="description-title">Schools & colleges</div>
+                        <div class="description-container">Sports wear which include shorts, T-Shirts, Track pants,
+                            Track Suite full set, jersey with name & numbers, cultural dresses etc.,</div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-card-wrapper flex-basis-40">
+                <div class="category-card">
+                    <div class="image-container">
+                        <img src="./images/carousel/carousel-img (1).png" alt="">
+                    </div>
+                    <div class="content-container">
+                        <div class="description-title">Corporate</div>
+                        <div class="description-container">All types of T-Shirts with full sublimation printing or with
+                            prints/embroiding.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-card-wrapper flex-basis-40">
+                <div class="category-card">
+                    <div class="image-container">
+                        <img src="./images/carousel/carousel-img (2).png" alt="">
+                    </div>
+                    <div class="content-container">
+                        <div class="description-title">Kids</div>
+                        <div class="description-container">Our products includes all types of Kids T-shirt and shorts
+                            with prints/embroiding.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-card-wrapper flex-basis-60">
+                <div class="category-card">
+                    <div class="image-container">
+                        <img src="./images//carousel/carousel-img (3).png" alt="">
+                    </div>
+                    <div class="content-container">
+                        <div class="description-title">Mens & Womens</div>
+                        <div class="description-container">Our products also includes leggings, swim-suits, night
+                            comfort wear for men and women, shorts and skirts of all types and many more.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about-section">
+        <h2 class="">About</h2>
+        <div class="max-container disp_flx_center align-item-center">
+            <div class="main-content-wrapper width-50">
+                <div class="about-descrition-container border-rad-20 f18">
+                    <p>A Renowned entity in the world of fashion, <b>Shastik
+                            Apparels</b> is leading apparel manufacturer and exporter in India, Since 2000.</p>
+                    <p>
+                        Situated in South india’s Textile hub - tirupur with all modern facilities gives us a distinct
+                        advantage of fabric processing. We employ skilled people from surrounding neighborhood.</p>
+                </div>
+            </div>
+            <div class="main-image-wrapper width-50">
+                <div class="about-image-container border-rad-20 overflow-hidden"><img src="./images/About.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="max-container">
+            <div class="mission-list-container">
+                <h3 class="mission-list-title txt-align-left">Mission Statement</h3>
+                <ul class="mission-list">
+                    <li><img src="./images/list-icon.png" class="list-icon" alt=""><span>The Highest Quality
+                            assurance</span></li>
+                    <li><img src="./images/list-icon.png" class="list-icon" alt=""><span>Exceptional Value</span></li>
+                    <li><img src="./images/list-icon.png" class="list-icon" alt=""><span>Innovative Solutions to meet
+                            new
+                            trends and demands</span></li>
+                    <li><img src="./images/list-icon.png" class="list-icon" alt=""><span>To satisfy the entire customers
+                            requirements</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section" id="service-section">
+        <h2 class="">Service We Provide</h2>
+        <div class="max-container disp_flx_center align-item-center">
+            <div class="main-content-wrapper width-50">
+                <div class="service-descrition-container border-rad-20 f16">
+                    <p>We provide you services like custom
+                        T-shirts, Hoodies and all other garment related wears for Schools, Collages, Corporates, Bulk
+                        orders and also for Individuals as per the guidelines and the style structure given by our
+                        customers.
+                    </p>
+                </div>
+            </div>
+            <div class="main-image-wrapper width-50">
+                <div class="service-image-container border-rad-20 overflow-hidden"><img src="./images/service.png"
+                        class="service-img" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact-section">
+        <h2>Contact</h2>
+        <div class="max-container disp_flx_center">
+            <div class="contact-wrapper width-25">
+                <div class="contact-container max-width-210" style="margin-right:40px;">
+                    <div class="contact-icon-container txt-align-center"><img src="./images/location-icon.png"
+                            class="contact-section-icon" alt=""></div>
+                    <div class="address-container txt-align-left">
+                        <h4 class="address-title">shastik apparels</h4>
+                        <div class="address-description">10-1, Pudhu Thottam,
+                            Padhmavathipuram,
+                            Gandhinagar (post),
+                            Tirupur - 641603.
+                            INDIA</div>
+                    </div>
+                    <div class="address-container txt-align-left">
+                        <h4 class="address-title">sri dhanalakshmi tex</h4>
+                        <div class="address-description">14/29, College road,
+                            7th cross,<br>
+                            Tirupur - 641602.
+                            INDIA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-wrapper width-25">
+                <div class="contact-container">
+                    <div class="contact-icon-container disp_inline txt-align-center" style="margin-right:15px;"><img
+                            src="./images/contact-icon.png" class="contact-section-icon" alt=""></div>
+                    <div class="contact-icon-container disp_inline txt-align-center"><img
+                            src="./images/watsapp-icon.png" class="contact-section-icon" alt=""></div>
+                    <div class="contact-number">+91 98941 66858,<br>+91 97880 74743</div>
+                </div>
+            </div>
+            <div class="contact-wrapper width-25">
+                <div class="contact-container">
+                    <div class="contact-icon-container txt-align-center"><img src="./images/mail-icon.png"
+                            class="contact-section-icon" alt=""></div>
+                    <div class="email-info txt-align-center">
+                        <a href="mailto:jk@shastikapparels.com" target="_blank">jk@shastikapparels.com</a>
+                        <a href="mailto:dy@shastikapparels.com" target="_blank">dy@shastikapparels.com</a>
+                    </div>
+                    <div class="contact-icon-container txt-align-center"><img src="./images/globe-icon.png"
+                            class="contact-section-icon" alt=""></div>
+                    <div class="website-link email-info txt-align-center">
+                        <a href="" target="_blank">www.shastikapparels.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-wrapper width-25">
+                <div class="contact-container">
+                    <div class="contact-icon-container txt-align-center"><img src="./images/time.png"
+                            class="contact-section-icon" alt=""></div>
+                    <div class="timings-info">
+                        <table class="txt-align-right">
+                            <tr>
+                                <td><b><span> Mon - Sat : </span></b></td>
+                                </td>
+                                <td class="txt-align-left"> <span>09:00 AM</span> - <span>09:00 PM</span></td>
+                            </tr>
+                            <tr>
+                                <td><b><span> Sun : </span></b></td>
+                                <td class="txt-align-left"><span>09:00 AM</span> - <span>03:00 PM</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-section" id"location-section">
+        <div class="max-container disp_flx_center pd-top50">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.77255929975!2d77.3235133!3d11.130309600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907c75b94397b%3A0x1777bf4ddae7912a!2sShastik%20Apparel!5e0!3m2!1sen!2sin!4v1661945977651!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" class="location" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.0623239863785!2d77.33045471480375!3d11.108733092096609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x231fb2b968601f42!2zMTHCsDA2JzMxLjQiTiA3N8KwMTknNTcuNSJF!5e0!3m2!1sen!2sin!4v1662141665500!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" class="location" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <div class="sticky-pop-pup pos_fix">
+        <a href="http://wa.me/919894166858" target="_blank" class="watsapp-link"><img src="./images/watsapp.png"
+                alt=""></a>
+        <div class="scroll-to-top"><img src="./images/scroll-to-top.png" alt=""></div>
+    </div>
+    <footer class="txt-align-right">
+        <div class="max-container f13">
+            © Copyrights 2022 - 2023.shastik apparels.All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+
+        // .........................jQuery for smooth scroll...................
+
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <script>
+
+        $('.hero-carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrows: false,
+            autoplaySpeed: 2000,
+            centerMode: true,
+            pauseOnHover: false,
+            centerPadding: "0px",
+            dots: true
+        });
+    </script>
+
+
+    <script>
+        $('.scroll-to-top').click(function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+        function scrollFunction() {
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            if (width > 1024) {
+                if ($(".scroll-to-top").scrollTop() > 20 || document.documentElement.scrollTop > 20) {
+                    $(".scroll-to-top")[0].style.animation = "pop-pup 5000ms ease-in-out 300ms forwards";
+                } else {
+                    $(".scroll-to-top")[0].style.animation = "none";
+                }
+            }
+        }
+        $(window).scroll(scrollFunction);   
+    </script>
+
+    <script>
+
+        $('.open-sidebar-icon').click(function () {
+            $('.main-sidebar').css("transform", "translateX(0%)");
+            $('.sidebar-freezer').show();
+        });
+
+        $('.close-sidebar-icon').click(function () {
+            $('.main-sidebar').css("transform", "translateX(100%)");
+            $('.sidebar-freezer').hide();
+        });
+
+        document.querySelectorAll(".sidebar-menu-list")[0].addEventListener('click', (e) => {
+            $('.main-sidebar').css("transform", "translateX(100%)");
+            $('.sidebar-freezer').hide();
+        });
+
+    </script>
+
+</body>
+
+</html>
